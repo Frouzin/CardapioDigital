@@ -253,3 +253,31 @@ item-categoria {
     padding: 15px;
     font-size: 18px;
 }
+
+/* Detalhes do Produto*/
+
+.bg-top.details{
+    height: 410px;
+}
+
+.container-voltar{
+    color: var(--color-black) !important;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none !important;
+    font-size: 18px;
+}
+
+.container-imagem-produto{
+    height: 240px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
