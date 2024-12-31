@@ -35,6 +35,10 @@ b{
     font-family: 'PoppinsMedium', 'Rubik', sans-serif;
 }
 
+.hidden{
+    display: none !important;
+}
+
 .bg-top {
     position: absolute;
     top: 0px;
@@ -242,4 +246,10 @@ item-categoria {
     position: relative;
     padding-top: 2px;
     margin-right: 2px;
+}
+
+.menu-bottom.disable{
+    justify-content: center;
+    padding: 15px;
+    font-size: 18px;
 }
