@@ -459,3 +459,28 @@ textarea{
     border-radius: 15px;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
 }
+
+.normal-text{
+    font-size: 14px;
+    color: var(--color-text);
+}
+.normal-text b{
+    color: var(--color-black);
+}
+
+.btn-full{
+    font-weight: bold;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 10px;
+    width: calc(100%-20px);
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 15px 25px;
+    font-size: 18px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid #ffe28c !important;
+    
+}
