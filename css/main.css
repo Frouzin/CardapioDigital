@@ -39,6 +39,9 @@ b{
     display: none !important;
 }
 
+.pr-o{
+    padding-right: 0px !important;
+}
 .bg-top {
     position: absolute;
     top: 0px;
@@ -524,8 +527,31 @@ textarea{
 }
 
 .carrinho .infos-produto .name-opcional,
-.carrinho .infos-produto .price-opcional{
+.carrinho .infos-produto .price-opcional,
+.carrinho .infos-produto .obs-opcional{
     font-size: 14px;
     color: var(--color-text);
     margin-left: 10px;
+}
+
+.carrinho .infos-produto .obs-opcional{
+    margin-right: 75px;
+}
+
+.detalhes-produto-edit{
+    font-size: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+.carrinho .infos-produto .name-total{
+    font-size: 18px;
+    color: var(--color-black);
+}
+
+.carrinho .infos-produto .price-total{
+    font-size: 18px;
+    color: var(--color-primary);
 }
