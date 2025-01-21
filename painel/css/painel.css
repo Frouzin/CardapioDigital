@@ -112,6 +112,38 @@
     margin-top: 40px;
 }
 
+/* Menu Topo */
 
+h1.title-page {
+    color: var(--color-black);
+    font-size: 20px;
+    flex: 1;
+}
 
+.container-right {
+    display: flex;
+    align-items: center;
+}
 
+.container-dados p {
+    margin-bottom: 0;
+    font-size: 16px;
+    text-align: right;
+    color: var(--color-black);
+    line-height: 15px;
+}
+
+.container-dados span {
+    font-size: 13px;
+    text-align: right;
+    color: var(--color-text-out);
+}
+
+.container-dados {
+    margin-right: 30px;
+}
+
+.conteudo {
+    padding-left: 270px;
+    padding-right: 15px;
+}
