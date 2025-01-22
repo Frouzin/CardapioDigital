@@ -650,3 +650,57 @@ input:checked + .slider::before {
 .opacity-05 {
     opacity: 0.5;
 }
+
+/* Empresa */
+
+.logo-empresa .container-img-sobre {
+    position: relative;
+    margin-top: 0;
+    width: 110px;
+    height: 110px;
+    right: 0;
+    margin-right: 20px;
+}
+
+.logo-empresa .icon-action {
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+}
+
+.detalhes-empresa {
+    flex: 1;
+}
+
+.detalhes-empresa textarea {
+    height: 250px!important;
+}
+
+.container-cep .form-control {
+    padding-right: 75px;
+}
+
+.container-cep .btn {
+    float: right;
+    margin-top: -45px;
+    margin-right: 10px;
+}
+
+.horario .form-control {
+    height: 52px;
+}
+
+.horario .btn-red {
+    margin-top: 30px;
+}
+
+/* Relatórios */
+
+.value-card {
+    font-size: 20px;
+    color: var(--color-black);
+}
+
+.card-table, .data-table {
+    font-size: 14px!important;
+}
