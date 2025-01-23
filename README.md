@@ -15,3 +15,6 @@ Nesse Projeto utilizado na minha Hamburgueria Delivery Reis Burguer, eu criei co
 
 **Back-end:** NodeJs,MySQL
 
+
+## ACOMPANHE PELO NOTION
+-[NOTION](https://www.notion.so/PROJETO-DELIVERY-1844cafd8c638078a700e24837fa068a?pvs=4)
