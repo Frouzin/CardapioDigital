@@ -17,4 +17,4 @@ Nesse Projeto utilizado na minha Hamburgueria Delivery Reis Burguer, eu criei co
 
 
 ## ACOMPANHE PELO NOTION
--[NOTION](https://www.notion.so/PROJETO-DELIVERY-1844cafd8c638078a700e24837fa068a?pvs=4)
+- [NOTION](https://www.notion.so/PROJETO-DELIVERY-1844cafd8c638078a700e24837fa068a?pvs=4)
