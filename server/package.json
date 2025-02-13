@@ -7,5 +7,9 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "restify": "^11.1.0",
+    "restify-eventsource": "^2.0.0"
+  }
 }
