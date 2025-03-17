@@ -7,7 +7,7 @@ var login = {};
 login.event = {
 
     init:() => {
-        console.log('Olá');
+
     }
 
 }
