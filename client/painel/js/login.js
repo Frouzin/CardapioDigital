@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(event){
+document.addEventListener("DOMContentLoaded", function (event) {
     login.event.init();
 });
 
@@ -6,7 +6,8 @@ var login = {};
 
 login.event = {
 
-    init:() => {
+    init: () => {
+
         document.querySelector("#btnLogin").onclick = () => {
             login.method.validarLogin();
         }
@@ -17,43 +18,47 @@ login.event = {
 
 login.method = {
 
-    //Valida os campos
-    validarLogin : () => {
-        let email = document.querySelector('#txtEmailLogin').value.trim();
-        let senha = document.querySelector('#txtSenhaLogin').value.trim();
+    // Valida os campos
+    validarLogin: () => {
 
-        if(email.length == 0){
-            alert("Informe o Email, por favor.");
+        let email = document.querySelector("#txtEmailLogin").value.trim();
+        let senha = document.querySelector("#txtSenhaLogin").value.trim();
+
+        if (email.length == 0) {
+            alert("Informe o e-mail, por favor.");
             document.querySelector("#txtEmailLogin").focus();
             return;
         }
 
-        if(senha.length == 0){
-            alert("Informe a Senha, por favor.");
+        if (senha.length == 0) {
+            alert("Informe a senha, por favor.");
             document.querySelector("#txtSenhaLogin").focus();
             return;
         }
 
-        login.method.login(email,senha);
+        login.method.login(email, senha);
 
     },
 
-    //metodo que gaz o login (via API)
+    // método que faz o login (via API)
     login: (email, senha) => {
 
         var dados = {
-            email:email,
-            senha:senha
+            email: email,
+            senha: senha
         }
-        app.method.post('/login', JSON.stringify(),
+
+        app.method.post('/login', JSON.stringify(dados),
             (response) => {
+
                 console.log(response);
+
             },
             (error) => {
                 console.log(error);
-
-            }    
+            }, true
         )
+
     }
 
 }
