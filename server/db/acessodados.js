@@ -1,56 +1,47 @@
-var mysql = require('mysql');
+const mysql = require('mysql2/promise');
 
 module.exports = class AcessoDados {
 
     async Query(SqlQuery, parametros) {
 
+        let connection;
+
         try {
-            
-            var SqlQueryUp = SqlQuery;
-            var retorno;
-            var connection = mysql.createConnection(global.config.database);
+            let SqlQueryUp = SqlQuery;
 
             // percorre os parametros
             if (parametros && parametros != undefined) {
-
                 let p = parametros;
 
                 for (let key in p) {
-
                     if (p.hasOwnProperty(key)) {
-
                         let campo = key;
                         let valor = p[key];
 
-                        SqlQueryUp = SqlQueryUp.replace('@' + campo, `'${valor}'`);
+                        // Se for string, adiciona aspas simples
+                        if (typeof valor === 'string') {
+                            valor = `'${valor}'`;
+                        }
 
+                        SqlQueryUp = SqlQueryUp.replace('@' + campo, valor);
                     }
-
                 }
-
             }
 
-            connection.connect();
+            connection = await mysql.createConnection(global.config.database);
 
-            await new Promise((resolve, reject) => {
+            const [results] = await connection.query(SqlQueryUp);
 
-                connection.query(SqlQueryUp, function (error, results, fields) {
-                    if (error) {
-                        reject();
-                        throw error;
-                    }
-                    retorno = results;
-                    resolve();
-                });
-
-            });
-
-            connection.end();
-            return retorno;
+            return results;
 
         } catch (error) {
-            console.log(error);
+            console.error('❌ Erro na Query:', error);
             return error;
+
+        } finally {
+            if (connection) {
+                await connection.end();
+            }
         }
 
     }
