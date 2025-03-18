@@ -50,9 +50,19 @@ login.method = {
 
         app.method.post('/login', JSON.stringify(dados),
             (response) => {
+                
+                if (response.status == 'error') {
+                    app.method.mensagem(response.message);
+                    return;
+                }
+                if (response.status == "success"){
+                    app.method.gravarValorStorage(response.TokenAcesso, "token");
+                    app.method.gravarValorStorage(response.Nome, "Nome");
+                    app.method.gravarValorStorage(response.Email, "Email");
+                    app.method.gravarValorStorage(response.Logo, "Logo");
 
-                console.log(response);
-
+                    window.location.href = "/painel/home.html";
+                }
             },
             (error) => {
                 console.log(error);
