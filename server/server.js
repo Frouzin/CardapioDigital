@@ -39,12 +39,17 @@ server.use((req, res, next) => {
     next();
 });
 
+server.get('/public/*', restify.plugins.serveStatic({
+    directory: __dirname
+}))
+
+
 // Modifica o erro e mostra pro usuário uma mensagem personalizada
-server.on('restifyError', (req, res, err, callback) => {
+server.on('restifyError', function(req, res, err, callback) {
     err.toJSON = function customToJSON(){
         return { Erro: 'Página não encontrada' };
     };
     return callback();
 });
 
-module.exports = { server, restify, config: appConfig };
+module.exports = Object.assign({ server, restify, config })

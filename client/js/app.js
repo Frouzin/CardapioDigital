@@ -145,4 +145,21 @@ app.method = {
 
     },
 
+    // carrega os dados da empresa
+    carregarDadosEmpresa: () => {
+
+        document.querySelector('.nome-empresa').innerHTML = app.method.obterValorStorage('Nome');
+        document.querySelector('.email-empresa').innerHTML = app.method.obterValorStorage('Email');
+
+        let logotipo = app.method.obterValorStorage('Logo');
+
+        if (logotipo != undefined && logotipo != null && logotipo != 'null' && logotipo != '') {
+            document.querySelector('.logo-empresa').src = '/public/images/empresa/' + logotipo;
+        }
+        else {
+            document.querySelector('.logo-empresa').src = '/public/images/logo.png';
+        }
+
+    },    
+
 }
